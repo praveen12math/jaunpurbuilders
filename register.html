@@ -1,0 +1,248 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel = "icon" href = "img/32X32.png"
+type = "image/x-icon">
+<title>
+    jaunpurbuilders | Register
+</title>
+
+<head>
+<script>
+
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+        document.getElementById('submit').disabled = false;
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = '';
+  } else {
+    document.getElementById('submit').disabled = true;
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'Password did not matched';
+  }
+}
+</script>
+</head>
+
+<body>
+
+  <div class="row">
+      <div class="col-10"></div>
+      <div class="col-2" style="text-align: right">
+      <a i class="fas fa-home" style="font-size: 40;color: #000000" href="index.php"></a></i>
+      </div>
+  </div>
+  <br>
+
+    <div style="text-align: center;font-size: 200%;
+    font-family: amita">Register</div>
+
+    <br>
+    <div class="row">
+        <div class="col-lg-1 col-sm-1"></div>
+        <div class="col-lg-3 col-sm-10">
+            <br>
+    <div class="fb">
+    <br>
+        <i class="fab fa-facebook-f"></i> Register with facebook
+        <br><br>
+        </div><br>
+        <div class="google">
+                <br>
+                <i class="fab fa-google"></i> Register with Google
+                    <br><br>
+                    </div><br>
+
+                    <div class="phone">
+                        <br>
+                        <i class="fas fa-phone"></i> Register with Phone
+                            <br><br>
+                            </div>
+        </div>
+        <div class="col-1" style="text-align: center"><br>
+            <div class="vl"></div><div class="hr"></div><br>
+            </div>
+        <div class="col-lg-6 col-sm">
+
+            <form onsubmit="return checkPassword(this)" action="register.php" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col">
+                    <label><b>Full Name:</b></label>
+              <input class="input1 form-control" type="text" name="name" required>
+              <label><b>Birthday:</b></label
+                ><input class="input1 form-control" type="date" name="dob">
+              <label><b>Valid Email:</b></label>
+              <input class="input1 form-control" type="email" name="email" required>
+                    <label><b>Phone:</b></label>
+              <input class="input1 form-control" type="text" name="phone" required>
+              <label><b>Password:</b></label>
+              <input class="input1 form-control" type="password" name="password" required id="password" onkeyup='check();'>
+              <label><b>Confirm Password:</b>  <span id='message'></span></label>
+              <input class="input1 form-control" type="password" name="password1" required id="confirm_password" onkeyup='check();'>
+              <label><b>Profile Picture:</b></label>
+              <input class="input1 form-control" type="file" name="file" required>
+
+            </div><br><br>
+
+
+              </div>
+              <br><br>
+              <div class="row">
+                  <div class="col-2"></div>
+                  <div class="col">
+                        <input class="input1 form-control btn btn-primary" type="submit" name="submit" value="Register" id="submit" disabled>
+              </div>
+              <div class="col">
+                <a href="login.php"><button type="button" class="btn btn-primary" style="width:100%">Login</button></a>
+
+              </div>
+              <div class="col-1"></div>
+              </div>
+            </form>
+            </div><div class="col-lg-1 col-sm-1"></div>
+            </div><br><br>
+            </body>
+
+
+<!-- FOOTER -->
+
+
+<div style="background-color: #ffc107!important;width:100%">
+        <br>
+    <div class="row">
+        <div class="col-lg-4">
+            </div>
+            <div class="col">
+                <a href="https://www.facebook.com/">
+    <i class="fab fa-facebook-f" style="font-size:25px"></i></a>
+    </div>
+    <div class="col">
+        <a href="https://twitter.com/">
+    <i class="fab fa-twitter" style="font-size:25px"></i></a>
+    </div>
+    <div class="col">
+        <a href="https://in.pinterest.com/">
+        <i class="fab fa-pinterest" style="font-size:25px"></i></a>
+    </div>
+    <div class="col">
+        <a href="https://www.youtube.com/">
+        <i class="fab fa-youtube" style="font-size:25px"></i></a>
+        </div>
+        <div class="col-lg-4">
+            </div>
+    </div>
+    <hr>
+            <div style="font-family: 'Times New Roman', Times, serif; text-align: center">
+                © Copyright @ 2019 | jaunpur builders. All Right Reserved. Website Designed by Praveen Yadav
+    </div>
+    </div>
+
+    
+    <style>
+        .row{
+            margin-left:0px;
+            margin-right:0px;
+        }
+        </style>
+
+    
+    <style>
+        .row{
+            margin-left:0px;
+            margin-right:0px;
+            
+        }
+        </style>
+
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Amita');
+      body{
+        
+    background-position: right;
+}
+.txt{
+    font-family: amita;
+    font-size: 40px;
+}
+.fb{
+    border-radius: .3rem;
+    background-color: #344F86;
+    color: #ffffff;
+    text-align: center;
+}
+.google{
+    border-radius: .3rem;
+    background-color: green;
+    color: #ffffff;
+    text-align: center;
+}
+.phone{
+    border-radius: .3rem;
+    background-color: red;
+    color: #ffffff;
+    text-align: center;
+}
+  @media only screen and (max-width: 768px){
+    .img{
+        width: 80%;
+    }
+    .navbar-brand{
+        width: 79%;
+    }
+    .hr{
+    height: 2px;
+    border-left: 330px solid;
+}
+}
+@media only screen and (min-width: 768px)
+{
+    .vl{
+    height: 440px;
+    border-left: 4px solid;
+    margin-left: 72px;
+}
+.fb{
+    border-radius: .3rem;
+    background-color: #344F86;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+.google{
+    border-radius: .3rem;
+    background-color: green;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+.phone{
+    border-radius: .3rem;
+    background-color: red;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+.img{
+    width: 65%;
+}
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.input1{
+    border-radius: .3rem;
+    height: 40px;
+    width: 100%;
+}
+  </style>
