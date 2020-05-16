@@ -1,4 +1,3 @@
-
 <?php
 include('header.php');
 $user = $_SESSION['id'];
@@ -64,14 +63,14 @@ $total = 0;
   </div>
 
   <div style="font-family:amita; font-size:30px;text-align: center">Total  <i class="fas fa-rupee-sign"></i>
-  
+
   <?php echo $total; ?>
   </div>
 
   <div class="row">
     <div class="col-4"></div>
     <div class="col-4">
-  <a href="placeCart.php"> 
+  <a href="placeCart.php">
     <button class="btn btn-warning" style="width:100%;font-family:amita">Place Order</button>
       </a>
 </div>

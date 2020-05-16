@@ -66,7 +66,7 @@ session_start();
                     $myid = $row1['id'];
                     $myid = "user$myid";
                     $myadd = "add$myadd";
-                   
+
 
                      $conn1 = mysqli_connect('localhost','root','','buss_user');
                       mysqli_query($conn1,"create table $myid(id int not null primary key auto_increment,productName varchar(300),price int,quantity varchar(200),type varchar(200))");

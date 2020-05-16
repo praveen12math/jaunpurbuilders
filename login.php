@@ -8,11 +8,7 @@
     $error='';
 
     $db=mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-    if(isset($_POST['submit']))
-    {
-
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-    {
+   
          $myusername=mysqli_real_escape_string($db,$_POST['username']);
          $mypassword=mysqli_real_escape_string($db,$_POST['password']);
          if($myusername=='admin' && $mypassword=='admin')
@@ -37,16 +33,20 @@
          }
          else
          {
-            $error="You Entered invalid Username or password";
+            ?>
+            <script type="text/javascript">
+            alert("Invalid Username or Password");
+            window.location.href = "index.php";
+            </script>
+            <?php
          }
     }
-}
-    }
+
 
 ?>
 
 
-
+<!-- 
 
 
 <HTML>
@@ -114,7 +114,7 @@ type = "image/x-icon">
               <input class="input1 form-control" type="text" name="username" required>
               <label style="color:000000"><b>Password:</b></label>
               <input class="input1 form-control" type="password" name="password" required>
-<div style="font-family: Times New Roman;color: #ff0000"> <?php echo $error; ?></div>
+<div style="font-family: Times New Roman;color: #ff0000"></div>
 
             </div><br><br>
 
@@ -227,4 +227,4 @@ body{
   height: 40px;
   width: 100%;
 }
-</style>
+</style> -->

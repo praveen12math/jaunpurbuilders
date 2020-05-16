@@ -29,87 +29,112 @@ var check = function() {
     document.getElementById('message').innerHTML = 'Password did not matched';
   }
 }
+
+function readURL(input) {
+       if (input.files && input.files[0]) {
+           var reader = new FileReader();
+
+           reader.onload = function (e) {
+               $('#blah')
+                   .attr('src', e.target.result);
+           };
+
+           reader.readAsDataURL(input.files[0]);
+       }
+   }
 </script>
 </head>
 
 <body>
 
   <div class="row">
+
       <div class="col-10"></div>
       <div class="col-2" style="text-align: right">
-      <a i class="fas fa-home" style="font-size: 40;color: #000000" href="index.php"></a></i>
+      <a i class="fas fa-home" style="font-size: 40;color: #000000" href="index.php"></a>
       </div>
   </div>
-  <br>
 
-    <div style="text-align: center;font-size: 200%;
-    font-family: amita">Register</div>
+    <h1 class="display-4" style="text-align:center">Register</h1>
 
-    <br>
-    <div class="row">
-        <div class="col-lg-1 col-sm-1"></div>
-        <div class="col-lg-3 col-sm-10">
-            <br>
-    <div class="fb">
-    <br>
-        <i class="fab fa-facebook-f"></i> Register with facebook
-        <br><br>
-        </div><br>
-        <div class="google">
-                <br>
-                <i class="fab fa-google"></i> Register with Google
-                    <br><br>
-                    </div><br>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
 
-                    <div class="phone">
-                        <br>
-                        <i class="fas fa-phone"></i> Register with Phone
-                            <br><br>
-                            </div>
-        </div>
-        <div class="col-1" style="text-align: center"><br>
-            <div class="vl"></div><div class="hr"></div><br>
+      <div class="row">
+          <div class="col-lg-4 col-sm" id="social">
+      <div class="fb">
+      <br>
+          <i class="fab fa-facebook-f"></i> Register with facebook
+          <br><br>
+          </div><br>
+          <div class="google">
+                  <br>
+                  <i class="fab fa-google"></i> Register with Google
+                      <br><br>
+                      </div><br>
+
+                      <div class="phone">
+                          <br>
+                          <i class="fas fa-phone"></i> Register with Phone
+                              <br><br>
+                              </div>
+          </div>
+
+          <div class="col-lg">
+          <div class="vl">
+              <span class="vl-innertext">or</span>
+          </div>
+          </div>
+
+          <div class="col-lg-7 col-sm">
+
+            <div class="hide-md-lg">
+              <br>
+              <p style="text-align:center">Or register manually:</p>
             </div>
-        <div class="col-lg-6 col-sm">
 
-            <form onsubmit="return checkPassword(this)" action="register.php" method="POST" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col">
-                    <label><b>Full Name:</b></label>
-              <input class="input1 form-control" type="text" name="name" required>
-              <label><b>Birthday:</b></label
-                ><input class="input1 form-control" type="date" name="dob">
-              <label><b>Valid Email:</b></label>
-              <input class="input1 form-control" type="email" name="email" required>
-                    <label><b>Phone:</b></label>
-              <input class="input1 form-control" type="text" name="phone" required>
-              <label><b>Password:</b></label>
-              <input class="input1 form-control" type="password" name="password" required id="password" onkeyup='check();'>
-              <label><b>Confirm Password:</b>  <span id='message'></span></label>
-              <input class="input1 form-control" type="password" name="password1" required id="confirm_password" onkeyup='check();'>
-              <label><b>Profile Picture:</b></label>
-              <input class="input1 form-control" type="file" name="file" required>
-
-            </div><br><br>
-
-
-              </div>
-              <br><br>
+              <form onsubmit="return checkPassword(this)" action="register.php" method="POST" enctype="multipart/form-data">
               <div class="row">
-                  <div class="col-2"></div>
                   <div class="col">
-                        <input class="input1 form-control btn btn-primary" type="submit" name="submit" value="Register" id="submit" disabled>
-              </div>
-              <div class="col">
-                <a href="login.php"><button type="button" class="btn btn-primary" style="width:100%">Login</button></a>
+                      <label><b>Full Name:</b></label>
+                <input class="input1 form-control" type="text" name="name" required>
+                <label><b>Birthday:</b></label
+                  ><input class="input1 form-control" type="date" name="dob">
+                <label><b>Valid Email:</b></label>
+                <input class="input1 form-control" type="email" name="email" required>
+                      <label><b>Phone:</b></label>
+                <input class="input1 form-control" type="text" name="phone" required>
+                <label><b>Password:</b></label>
+                <input class="input1 form-control" type="password" name="password" required id="password" onkeyup='check();'>
+                <label><b>Confirm Password:</b>  <span id='message'></span></label>
+                <input class="input1 form-control" type="password" name="password1" required id="confirm_password" onkeyup='check();'>
+                <label><b>Profile Picture:</b></label>
+                <input class="input1 form-control" type="file" name="file" accept="image/*" onchange="readURL(this);">
+                <br>
+                <img id="blah">
 
+              </div><br><br>
+
+
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col">
+                          <input class="input1 form-control btn btn-primary" type="submit" name="submit" value="Register" id="submit" disabled>
+                </div>
+                <div class="col">
+                  <a href="login.php"><button type="button" class="btn btn-primary" style="width:100%">Login</button></a>
+
+                </div>
+                <div class="col-1"></div>
+                </div>
+              </form>
+              </div><div class="col-lg-1 col-sm-1"></div>
               </div>
-              <div class="col-1"></div>
               </div>
-            </form>
-            </div><div class="col-lg-1 col-sm-1"></div>
-            </div><br><br>
+
+    </div>
             </body>
 
 
@@ -146,29 +171,16 @@ var check = function() {
     </div>
     </div>
 
-    
-    <style>
-        .row{
-            margin-left:0px;
-            margin-right:0px;
-        }
-        </style>
 
-    
     <style>
-        .row{
-            margin-left:0px;
-            margin-right:0px;
-            
-        }
-        </style>
-
-  <style>
       @import url('https://fonts.googleapis.com/css?family=Amita');
       body{
-        
-    background-position: right;
-}
+
+            background-position: right;
+          }
+
+
+
 .txt{
     font-family: amita;
     font-size: 40px;
@@ -192,23 +204,36 @@ var check = function() {
     text-align: center;
 }
   @media only screen and (max-width: 768px){
-    .img{
-        width: 80%;
+    .hide-md-lg{
+      display: block;
     }
-    .navbar-brand{
-        width: 79%;
-    }
-    .hr{
-    height: 2px;
-    border-left: 330px solid;
-}
+  .vl{
+    display: none;
+  }
 }
 @media only screen and (min-width: 768px)
 {
-    .vl{
-    height: 440px;
-    border-left: 4px solid;
-    margin-left: 72px;
+  #social{
+    top: 155px;
+  }
+  .hide-md-lg{
+    display: none;
+  }
+  .vl {
+  position: absolute;
+  left: 70%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 600px;
+}
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
 }
 .fb{
     border-radius: .3rem;
@@ -231,9 +256,7 @@ var check = function() {
     font-size: 18px;
     text-align: center;
 }
-.img{
-    width: 65%;
-}
+
 }
 .row{
     margin-left: 0px;
@@ -245,4 +268,19 @@ var check = function() {
     height: 40px;
     width: 100%;
 }
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+}
+.jumbotron{
+  background-color:white;
+}
+img{
+  max-width:180px;
+}
   </style>
+
+
+

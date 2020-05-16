@@ -11,8 +11,7 @@ require 'PHPMailer/src/SMTP.php';
 
 $conn = mysqli_connect("localhost","root","","buss");
 
-if(isset($_POST['email']))
-{
+
   $emailTo = $_POST['email'];
   $queryCheck = mysqli_query($conn,"select email from register where email='$emailTo'");
   if (mysqli_num_rows($queryCheck)==0) {
@@ -63,11 +62,11 @@ if(isset($_POST['email']))
   } catch (Exception $e) {
       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
-}
+
 
 ?>
 
-<HTML>
+<!-- <HTML>
   <body>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -110,4 +109,4 @@ if(isset($_POST['email']))
     margin-left:0px;
     margin-right: 0px
   }
-</style>
+</style> -->

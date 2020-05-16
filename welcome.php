@@ -20,6 +20,23 @@ type = "image/x-icon">
     jaunpurbuilders | Profile
 </title>
 
+<script type="text/javascript">
+
+function readURL(input) {
+       if (input.files && input.files[0]) {
+           var reader = new FileReader();
+
+           reader.onload = function (e) {
+               $('#blah')
+                   .attr('src', e.target.result);
+           };
+
+           reader.readAsDataURL(input.files[0]);
+       }
+   }
+
+</script>
+
 <div class="container">
 <br><br><br><br>
 <div id="log"><a class="a1" href="logout.php">Logout <i class="fas fa-sign-out-alt"></i></a>
@@ -70,6 +87,7 @@ type = "image/x-icon">
   </table>
   <hr>
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updatePic">Update Pic</button>
 
   <?php
   $conn3 = mysqli_connect('localhost','root','','buss_user');
@@ -82,52 +100,60 @@ if($row1){
 
   ?>
 
+<button type="button"  class="btn btn-primary float-right ml-2" data-toggle="collapse" data-target="#demo">Show Address</button>
+  <div id="demo" class="collapse">
+
+
   <div style="text-align:center" class="detail">
-  Address
+  <br><br>
+  <h1>Address</h1>
   <table class="table detail">
   <tbody>
     <tr>
-      <td>Country</td>
+      <td>Country</td><td></td>
       <td><?php echo $row1['country']?></td>
     </tr>
     <tr>
-      <td>Name</td>
+      <td>Name</td><td></td>
       <td><?php echo $row1['name']?></td>
     </tr>
     <tr>
-      <td>Street</td>
+      <td>Street</td><td></td>
       <td><?php echo $row1['street']?></td>
-    </tr>   
+    </tr>
     <tr>
-    <td>City</td>
+    <td>City</td><td></td>
     <td><?php echo $row1['city']?></td>
 </tr>
 <tr>
-  <td>State</td>
+  <td>State</td><td></td>
   <td><?php echo $row1['state'] ?></td>
 </tr>
 <tr>
-  <td>Zip Code</td>
+  <td>Zip Code</td><td></td>
   <td><?php echo$row1['zip']?></td>
 </tr>
 <tr>
-  <td>Phone</td>
+  <td>Phone</td><td></td>
   <td><?php echo$row1['phone']?></td>
 </tr>
 <tr>
-  <td>Code</td>
+  <td>Code</td><td></td>
   <td><?php echo$row1['code']?></td>
 </tr>
-<tr>
-  <td></td>
-  <td><a href="editAdd.php?id=<?php echo $row['id']?>"><button style="width:100%" class="btn btn-primary">Edit Address </button></a></td>
-</tr>
-  </tbody>
+</tbody>
   </table>
-</div>
-
-</div>
   </div>
+  </div>
+
+  <a href="editAdd.php?id=<?php echo $row['id']?>"><button style="float:right" class="btn btn-primary">Edit Address
+  </button></a>
+
+
+  </div>
+
+  </div>
+</div>
 
 <?php
 
@@ -135,16 +161,7 @@ if($row1){
 else{
 ?>
 
-<table class="table detail">
-  <tbody>
-<tr>
-  <td></td>
-  <td>
-<a href="addAdd.php"> <button style="width:100%" class="btn btn-primary">Add Address </button> </a>
-</td>
-</tr>
-</table>
-</tbody>
+<button style="float:right" class="btn btn-primary" data-toggle="modal" data-target="#addAdd">Add Address </button>
 
 <?php
 
@@ -152,6 +169,125 @@ else{
 ?>
 
 <br>
+
+
+
+<div class="modal" id="addAdd">
+   <div class="modal-dialog">
+      <div class="modal-content">
+
+                <div class="modal-header">
+                    <h1>Add Adderss</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                  <div class="modal-body">
+
+                  <form action="addAdd.php" method="POST">
+
+                  <div class="form-group input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text bg-warning"><i class="fas fa-globe"></i></span>
+        </div>
+<select class="form-control" name="mycountry" id="">
+<option>India</option>
+</select>
+</div>
+
+          <div class="form-group input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text bg-warning"><i class="fas fa-user-tie"></i></span>
+          </div>
+<input class="input1 form-control" type="text" name="myname" placeholder="Name">
+</div>
+
+<div class="form-group input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text bg-warning"><i class="fas fa-street-view"></i></span>
+          </div>
+    <input class="input1 form-control" type="text" name="mystreet" placeholder="Steet Address">
+    </div>
+
+    <div class="form-group input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text bg-warning"><i class="fas fa-city"></i></span>
+          </div>
+    <input class="input1 form-control" type="text" name="mycity" placeholder="City">
+    </div>
+
+
+    <div class="form-group input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text bg-warning"><i class="fas fa-file-archive"></i></span>
+          </div>
+    <input class="input1 form-control" type="text" name="myzip" placeholder="Zip Code">
+    </div>
+
+    <div class="form-group input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text bg-warning"><i class="fas fa-mobile"></i></span>
+          </div>
+    <input class="input1 form-control" type="text" name="myphone" placeholder="Phone Number">
+ </div>
+
+ <div class="form-group input-group">
+          <div class="input-group-prepend">
+
+          </div>
+ <select class="form-control" name="mystate" id="">
+        <option>Uttar Pradesh</option>
+    </select>
+    </div>
+
+    <div class="form-group input-group">
+          <div class="input-group-prepend">
+
+          </div>
+    <input class="input1 form-control" type="text" name="mycode" placeholder="Code">
+    </div>
+
+                  </div>
+
+                  <div class="modal-footer">
+                  <button type="submit" style="float:right" class="btn btn-warning">Add</button>
+                  </div>
+
+                  </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="updatePic">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+<div class="modal-header">
+  <h1>Update Profile Pic</h1>
+    <button type="button" style="color:red" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<form class="" action="updatePic.php" method="post" enctype="multipart/form-data">
+<div class="modal-body">
+  <div class="form-group input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text bg-warning"><i class="fas fa-file-image"></i></span>
+    </div>
+    <input class="input1 form-control" type="file" name="file" accept="image/*" onchange="readURL(this);">
+    <br>
+  </div>
+    <img id="blah">
+</div>
+
+<div class="modal-footer">
+  <button type="submit" class="btn btn-warning">Update</button>
+</div>
+
+</form>
+    </div>
+
+  </div>
+</div>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Amita');
@@ -195,5 +331,8 @@ else{
     text-align: right;
     font-family: amita;
     font-size: 20px;
+  }
+  #blah{
+      max-width:180px;
   }
   </style>

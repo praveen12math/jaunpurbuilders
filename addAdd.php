@@ -1,18 +1,13 @@
-<br><br><br><br><br>
-
 <?php
-include('header.php');
-
-if(isset($_POST['submit'])){
-
-    $country = $_POST['country'];
-    $name = $_POST['name'];
-    $street = $_POST['street'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $zip = $_POST['zip'];
-    $phone = $_POST['phone'];
-    $code = $_POST['code'];
+session_start();
+    $country = $_POST['mycountry'];
+    $name = $_POST['myname'];
+    $street = $_POST['mystreet'];
+    $city = $_POST['mycity'];
+    $state = $_POST['mystate'];
+    $zip = $_POST['myzip'];
+    $phone = $_POST['myphone'];
+    $code = $_POST['mycode'];
 
     $myadd = $_SESSION['id'];
     $myadd = "add$myadd";
@@ -29,12 +24,17 @@ if($sql){
     <?php
 }
 else{
-    echo "Something went wrong";
-}
+    ?>
+    <script type="text/javascript">
+    alert("Something went wrong");
+    window.location.href = "welcome.php";
+    </script>
+    
+    <?php
 }
 ?>
 
-  <div style="text-align:center;font-size:40px;font-family:amita">
+  <!-- <div style="text-align:center;font-size:40px;font-family:amita">
 Add Address
 </div>
 <title>
@@ -100,4 +100,4 @@ Add Address
     .input1{
         width: 100%
     }
-    </style>
+    </style> -->
