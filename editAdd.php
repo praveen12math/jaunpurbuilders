@@ -20,7 +20,7 @@ if($sql){
 ?>
 <script type="text/javascript">
 alert("Address Updated");
-window.location.href = "welcome.php";
+window.location.href = "welcome";
 </script>
 
 <?php
@@ -59,7 +59,7 @@ $row = mysqli_fetch_array($result);
     <h1 style="font-family: amita; text-align:center">Edit Address</h1>
 
 
-        <form action="editAdd.php" method="POST">
+        <form action="editAdd" method="POST">
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6 col-sm-12">
@@ -93,7 +93,14 @@ $row = mysqli_fetch_array($result);
             <br>
                 <label><b>Code</b></label>
                 <input class="input1 form-control" type="text" name="code" style="width: 50%" value="<?php echo $row['code'] ?>"><br>
-                <input class="form-control" type="submit" style="width:20%;background-color:#c2e9fb" value="Update" name="submit">
+<div class="row">
+    <div class="col">
+                <input class="form-control" type="submit" style="width:100%;background-color:#c2e9fb" value="Update" name="submit">
+</div>
+<div class="col">
+            <a href="welcome"><button type="button" class="btn" style="width:100%;background-color:#c2e9fb">Cancel</button></a>
+</div>
+</div>
             </div>
             <div class="col-3"></div>
             

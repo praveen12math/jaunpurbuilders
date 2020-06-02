@@ -52,7 +52,7 @@ $conn=mysqli_connect('localhost','root','','buss');
                         </div>
                         <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
                         <input type="submit" class="btn btn-primary" name="Submit" value="Submit">
-                        <a class="btn btn-default" href="welcome_admin.php" >Cancel</a>
+                        <a class="btn btn-default" href="welcome_admin" >Cancel</a>
                     </form>
                 </div>
             </div>

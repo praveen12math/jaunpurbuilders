@@ -18,7 +18,7 @@ $conn = mysqli_connect("localhost","root","","buss");
     ?>
         <script type="text/javascript">
         alert("You are not registered user Please do register");
-        window.location.href = "login.php";
+        window.location.href = "index";
         </script>
     <?php
   }
@@ -46,7 +46,7 @@ $conn = mysqli_connect("localhost","root","","buss");
       $mail->addReplyTo('no-reply@gmail.com', 'No-reply');
 
       // Content
-      $url = "http://localhost/buss/resetpassword.php?code=$code";
+      $url = "http://localhost/buss/resetpassword?code=$code";
       $mail->isHTML(true);                                  // Set email format to HTML
       $mail->Subject = 'Reset Password';
       $mail->Body    = "You request for reset password<a href='$url'>click here</a> for reset password";
@@ -56,7 +56,7 @@ $conn = mysqli_connect("localhost","root","","buss");
       ?>
           <script type="text/javascript">
           alert("A Password Reset link is sent on your Registered Email!");
-          window.location.href = "login.php";
+          window.location.href = "index";
           </script>
       <?php
   } catch (Exception $e) {

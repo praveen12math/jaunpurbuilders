@@ -13,7 +13,7 @@
 
     if(mysqli_query($conn,$sql) && mysqli_query($conn,$sql1) && mysqli_query($conn1,$sql2) && mysqli_query($conn1,$sql3))
     {
-        header("location: welcome_admin.php");
+        header("location: welcome_admin");
     }
     else{
     echo "Something Error";

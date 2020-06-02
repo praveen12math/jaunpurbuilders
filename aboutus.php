@@ -1,6 +1,6 @@
 
 
-<?php include('newHeader.html');
+<?php include('header.php');
 ?>
   <br><br>
 

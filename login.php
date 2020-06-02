@@ -14,7 +14,7 @@
          if($myusername=='admin' && $mypassword=='admin')
          {
             $_SESSION['user']= $myusername;
-             header('location: welcome_admin.php');
+             header('location: welcome_admin');
          }
          else
          {
@@ -29,14 +29,14 @@
          if($count==1)
          {
              $_SESSION['user']= $myusername;
-            header('location: welcome.php');
+            header('location: welcome');
          }
          else
          {
             ?>
             <script type="text/javascript">
             alert("Invalid Username or Password");
-            window.location.href = "index.php";
+            window.location.href = "index";
             </script>
             <?php
          }

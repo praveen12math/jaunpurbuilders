@@ -24,7 +24,7 @@ if (isset($_POST["password"])) {
           ?>
               <script type="text/javascript">
               alert("Your Password is Updated You can Login with new Password");
-              window.location.href = "login.php";
+              window.location.href = "index";
               </script>
           <?php
 
@@ -49,7 +49,7 @@ if (isset($_POST["password"])) {
 
   <div class="row">
     <div class="col-10">
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="index">
   <img class="img" src="img/logo8.png" title='Home' style="width:100%">
   </a>
 </div>

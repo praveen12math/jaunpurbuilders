@@ -1,10 +1,9 @@
 
 <?php
 include('header.php');
-if(!isset($_SESSION['user']))
+if(isset($_SESSION['user']))
 {
-  header('location:login.php');
-}
+  
 $conn = new mysqli('localhost', 'root', '', 'buss');
 $myemail=$_SESSION['user'];
 
@@ -146,7 +145,7 @@ if($row1){
   </div>
   </div>
 
-  <a href="editAdd.php?id=<?php echo $row['id']?>"><button style="float:right" class="btn btn-primary">Edit Address
+  <a href="editAdd?id=<?php echo $row['id']?>"><button style="float:right" class="btn btn-primary">Edit Address
   </button></a>
 
 
@@ -198,21 +197,21 @@ else{
           <div class="input-group-prepend">
           <span class="input-group-text bg-warning"><i class="fas fa-user-tie"></i></span>
           </div>
-<input class="input1 form-control" type="text" name="myname" placeholder="Name">
+<input class="input1 form-control" type="text" name="myname" placeholder="Name" required>
 </div>
 
 <div class="form-group input-group">
           <div class="input-group-prepend">
           <span class="input-group-text bg-warning"><i class="fas fa-street-view"></i></span>
           </div>
-    <input class="input1 form-control" type="text" name="mystreet" placeholder="Steet Address">
+    <input class="input1 form-control" type="text" name="mystreet" placeholder="Steet Address" required>
     </div>
 
     <div class="form-group input-group">
           <div class="input-group-prepend">
           <span class="input-group-text bg-warning"><i class="fas fa-city"></i></span>
           </div>
-    <input class="input1 form-control" type="text" name="mycity" placeholder="City">
+    <input class="input1 form-control" type="text" name="mycity" placeholder="City" required>
     </div>
 
 
@@ -220,14 +219,14 @@ else{
           <div class="input-group-prepend">
           <span class="input-group-text bg-warning"><i class="fas fa-file-archive"></i></span>
           </div>
-    <input class="input1 form-control" type="text" name="myzip" placeholder="Zip Code">
+    <input class="input1 form-control" type="text" name="myzip" placeholder="Zip Code" required>
     </div>
 
     <div class="form-group input-group">
           <div class="input-group-prepend">
           <span class="input-group-text bg-warning"><i class="fas fa-mobile"></i></span>
           </div>
-    <input class="input1 form-control" type="text" name="myphone" placeholder="Phone Number">
+    <input class="input1 form-control" type="text" name="myphone" placeholder="Phone Number" required>
  </div>
 
  <div class="form-group input-group">
@@ -288,6 +287,14 @@ else{
 
   </div>
 </div>
+
+<?php
+}
+else{
+  header("location:index");
+}
+?>
+
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Amita');

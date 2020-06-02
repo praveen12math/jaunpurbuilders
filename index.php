@@ -39,7 +39,7 @@ type = "image/x-icon">
 
     <div class="row">
             <div class="col-lg-3 col-sm-12 active">
-    <div class="card" alt="Card image"><a href="ganga-sand.php">
+    <div class="card" alt="Card image"><a href="ganga-sand">
         <img class="card-img-top" src="img/ganga-sand.jpg" style="width: 100%;height: 230px">
       </a>
         <div class="card-body">
@@ -67,7 +67,7 @@ type = "image/x-icon">
             </div>
             <div class="col-lg-3 col-sm-12">
                     <div class="card" alt="Card image">
-                      <a href="son-sand.php">
+                      <a href="son-sand">
                         <img class="card-img-top" src="img/dala-sand1.png" style="width: 100%;height: 230px">
                       </a>
                         <div class="card-body">
@@ -94,7 +94,7 @@ type = "image/x-icon">
                     </div>
                     <div class="col-lg-3 col-sm-12">
                             <div class="card" alt="Card image">
-                              <a href="#">
+                              <a href="">
                                 <img class="card-img-top" src="img/dhuddi-sand.jpg" style="width: 100%;height: 230px">
                               </a>
                                 <div class="card-body">
@@ -121,7 +121,7 @@ type = "image/x-icon">
                             </div>
             <div class="col-lg-3 col-sm-12">
                 <div class="card" alt="Card image">
-                  <a href="dala-stone.php">
+                  <a href="dala-stone">
                     <img class="card-img-top" src="img/dala-stone.jpg" style="width: 100%;height: 230px">
                   </a>
                     <div class="card-body">
@@ -149,7 +149,7 @@ type = "image/x-icon">
 
                 <div class="col-lg-3 col-sm-12">
                             <div class="card">
-                              <a href="small-stone.php">
+                              <a href="small-stone">
                                 <img class="card-img-top" src="img/small-stone1.png" style="width: 100%;height: 230px">
                               </a>
                                 <div class="card-body">
@@ -175,7 +175,7 @@ type = "image/x-icon">
                                     </div>
                  <div class="col-lg-3 col-sm-12">
                     <div class="card">
-                      <a href="brick.php">
+                      <a href="brick">
                         <img class="card-img-top" src="img/brick.png" style="width: 100%;height: 230px">
                       </a>
                         <div class="card-body">
@@ -199,7 +199,7 @@ type = "image/x-icon">
                             </div>
                  <div class="col-lg-3 col-sm-12">
                    <div class="card">
-                     <a href="cement-brick.php">
+                     <a href="cement-brick">
                     <img class="card-img-top" src="img/cement-brick.png" style="width: 100%;height: 230px">
                   </a>
                      <div class="card-body">
@@ -223,7 +223,7 @@ type = "image/x-icon">
                     </div>
                     <div class="col-lg-3 col-sm-12">
                          <div class="card">
-                           <a href="cement.php">
+                           <a href="cement">
                           <img class="card-img-top" src="img/cement.jpg" style="width: 100%;height: 230px">
                         </a>
                                <div class="card-body">

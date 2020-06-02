@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="font-size: 20px">
 
- <a class="navbar-brand" href="index.php">
+ <a class="navbar-brand" href="index">
 <img class="img" src="img/logo8.png" title='Home'>
 </a>
 
@@ -24,13 +24,13 @@
     <div class="collapse navbar-collapse justify-content-end" id="something">
     <ul class="navbar-nav"  style="font-family: times new roman">
       <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="aboutus.php">About Us</a>
+        <a class="nav-link" style="color: #000000" href="aboutus">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="service.php">Sevices</a>
+        <a class="nav-link" style="color: #000000" href="service">Sevices</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="contactus.php">Contact Us</a>
+        <a class="nav-link" style="color: #000000" href="contactus">Contact Us</a>
       </li>
 
           <?php
@@ -58,12 +58,12 @@
 
               ?>
             <li class="nav-item">
-            <a class="nav-link" style="color: #000000" href="welcome.php"><?php echo $row['name'];?></a>
+            <a class="nav-link" style="color: #000000" href="welcome"><?php echo $row['name'];?></a>
           </li>
 
 
           <li class="nav-item">
-      <a class="nav-link" style="color: #000000" href="cart.php"><i class="fas fa-shopping-cart" style="font-size:25px" title='Cart'> <span class="badge badge-danger"><?php echo $cart1; ?>
+      <a class="nav-link" style="color: #000000" href="cart"><i class="fas fa-shopping-cart" style="font-size:25px" title='Cart'> <span class="badge badge-danger"><?php echo $cart1; ?>
       </span>
     </i>
   </a>
